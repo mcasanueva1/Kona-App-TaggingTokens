@@ -1,10 +1,77 @@
 [
   {
     "name": "{{standaloneModal1}}",
-    "tags": "[id:standaloneModal1][type:modal][standalone]"
+    "tags": "[id:standaloneModal1][type:modal][standalone]",
+    "categories": ["standaloneModal"]
   },
   {
     "name": "{{standaloneModal1Content}}",
-    "tags": "[id: standaloneModal1Content][type:standaloneModalContent][modal:standaloneModal1]"
+    "tags": "[id: standaloneModal1Content][type:standaloneModalContent][modal:standaloneModal1]",
+    "categories": ["standaloneModal"]
+  },
+  {
+    "name": "{{utilMenu}}",
+    "tags": "[id:utilMenu][type:utilMenu][common]",
+    "categories": ["utilMenu"]
+  },
+  {
+    "name": "{{utilMenuRightMain}}",
+    "tags": "[id:utilMenuMainRight][type:utilMenuGroup][rightGroup][mainSlide][menu:utilMenu]",
+    "categories": ["utilMenu"]
+  },
+  {
+    "name": "{{utilMenuCenterMain}}",
+    "tags": "[id:utilMenuMainCenter][type:utilMenuGroup][centerGroup][mainSlide][menu:utilMenu]",
+    "categories": ["utilMenu"]
+  },
+  {
+    "name": "{{utilMenuRightStandalone}}",
+    "tags": "[id:utilMenuStandaloneRight][type:utilMenuGroup][rightGroup][standaloneModal][menu:utilMenu]",
+    "categories": ["utilMenu"]
+  },
+  {
+    "name": "{{utilMenuCenterStandalone}}",
+    "tags": "[id:utilMenuStandaloneCenter][type:utilMenuGroup][centerGroup][standaloneModal][menu:utilMenu]",
+    "categories": ["utilMenu"]
+  },
+  {
+    "name": "{{utilISIOff}}",
+    "tags": "[id:utilISIBtn][utilMenuButton][state:off]",
+    "categories": ["utilMenu", "ISI"]
+  },
+  {
+    "name": "{{utilISIOn}}",
+    "tags": "[id:utilISIBtn][utilMenuButton][state:on]",
+    "categories": ["utilMenu", "ISI"]
+  },
+  {
+    "name": "{{utilEmailCartOff}}",
+    "tags": "[id:utilEmailCartBtn][type:modalDualButton][modal:emailCart][utilMenuButton][state:off]",
+    "categories": ["utilMenu", "emailCart"]
+  },
+  {
+    "name": "{{utilEmailCartOn}}",
+    "tags": "[id:utilEmailCartBtn][type:modalDualButton][modal:emailCart][utilMenuButton][state:on]",
+    "categories": ["utilMenu", "emailCart"]
+  },
+  {
+    "name": "{{utilRefsOff}}",
+    "tags": "[id:utilRefsBtn][type:modalDualButton][modal:references][utilMenuButton][state:off]",
+    "categories": ["utilMenu", "references"]
+  },
+  {
+    "name": "{{utilRefsOn}}",
+    "tags": "[id:utilRefsBtn][type:modalDualButton][modal:references][utilMenuButton][state:off]",
+    "categories": ["utilMenu", "references"]
+  },
+  {
+    "name": "{{utilSitemapOff}}",
+    "tags": "[id:utilSMBtn][type:modalDualButton][modal:sitemap][utilMenuButton][state:off]",
+    "categories": ["utilMenu", "sitemap"]
+  },
+  {
+    "name": "{{utilSitemapOn}}",
+    "tags": "[id:utilSMBtn][type:modalDualButton][modal:sitemap][utilMenuButton][state:off]",
+    "categories": ["utilMenu", "sitemap"]
   }
 ]
