@@ -1,4 +1,4 @@
-[
+let taggingTokens = [
   {
     "name": "{{standaloneModal1}}",
     "tags": "[id:standaloneModal1][type:modal][standalone]",

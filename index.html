@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagging Tokens</title>
+    <script src="./taggingTokens.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tableBody = document.getElementById("table-body");
+            const searchInput = document.getElementById("search");
+            let tableData = taggingTokens; // Load JSON data
+
+            function renderTable(data) {
+                tableBody.innerHTML = ""; // Clear table
+                data.forEach(item => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${item.name}</td>
+                        <td>${item.tags}</td>
+                        <td>${item.categories.join(", ")}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            }
+
+            function sortTable(columnIndex) {
+                const isAscending = tableBody.getAttribute("data-sort") === "asc";
+                tableData.sort((a, b) => {
+                    let valA = Object.values(a)[columnIndex].toString().toLowerCase();
+                    let valB = Object.values(b)[columnIndex].toString().toLowerCase();
+                    return isAscending ? valA.localeCompare(valB) : valB.localeCompare(valA);
+                });
+                tableBody.setAttribute("data-sort", isAscending ? "desc" : "asc");
+                renderTable(tableData);
+            }
+
+            function filterTable() {
+                const query = searchInput.value.toLowerCase();
+                const filteredData = taggingTokens.filter(item =>
+                    item.name.toLowerCase().includes(query) ||
+                    item.tags.toLowerCase().includes(query) ||
+                    item.categories.some(cat => cat.toLowerCase().includes(query))
+                );
+                renderTable(filteredData);
+            }
+
+            document.getElementById("name-header").addEventListener("click", () => sortTable(0));
+            document.getElementById("tags-header").addEventListener("click", () => sortTable(1));
+            document.getElementById("categories-header").addEventListener("click", () => sortTable(2));
+            searchInput.addEventListener("input", filterTable);
+
+            renderTable(tableData); // Initial render
+        });
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; cursor: pointer; }
+        input { width: 100%; padding: 8px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Tagging Tokens Table</h2>
+    <input type="text" id="search" placeholder="Search tokens...">
+    
+    <table>
+        <thead>
+            <tr>
+                <th id="name-header">Name</th>
+                <th id="tags-header">Tags</th>
+                <th id="categories-header">Categories</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+</body>
+</html>
