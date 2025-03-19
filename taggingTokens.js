@@ -215,14 +215,3 @@ let taggingTokens = [
     "categories": ["tab"]
   }
 ]
-
-/*
-[id:tab1][type:tab]
-[id:tab1Buttons][type:tabButtons][tab:tab1]
-[id:tabBtn1][type:tabButton][tab:tab1][group:group1][state:on]
-[id:tabBtn2][type:tabButton][tab:tab1][group:group2][state:off]
-[id:tab1Contents][type:tabContents][tab:tab1]
-[id:tab1Content1][type:tabContent][group:group1][tab:tab1] 
-[id:tab1Content2][type:tabContent][group:group2][tab:tab1] 
-
-*/
