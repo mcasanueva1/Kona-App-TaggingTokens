@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tagging Tokens</title>
-    <script src="./taggingTokens.js"></script>
+    <script src="taggingTokens.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const tableBody = document.getElementById("table-body");
             const searchInput = document.getElementById("search");
-            let tableData = taggingTokens; // Load JSON data
+            const copyMessage = document.getElementById("copy-message");
+            let tableData = taggingTokens;
 
             function renderTable(data) {
-                tableBody.innerHTML = ""; // Clear table
+                tableBody.innerHTML = "";
                 data.forEach(item => {
                     const row = document.createElement("tr");
                     row.innerHTML = `
-                        <td>${item.name}</td>
+                        <td class="copy-cell" onclick="copyToClipboard('${item.name}')">${item.name}</td>
                         <td>${item.tags}</td>
                         <td>${item.categories.join(", ")}</td>
                     `;
@@ -34,7 +35,7 @@
                 tableBody.setAttribute("data-sort", isAscending ? "desc" : "asc");
                 renderTable(tableData);
             }
-            
+
             function filterTable() {
                 const query = searchInput.value.trim().toLowerCase();
                 const terms = query.split(/\s+/); // Split query into terms by spaces
@@ -48,12 +49,20 @@
                 renderTable(filteredData);
             }
 
+            window.copyToClipboard = function(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    copyMessage.textContent = `Copied: ${text}`;
+                    copyMessage.classList.add("visible");
+                    setTimeout(() => copyMessage.classList.remove("visible"), 2000);
+                });
+            };
+
             document.getElementById("name-header").addEventListener("click", () => sortTable(0));
             document.getElementById("tags-header").addEventListener("click", () => sortTable(1));
             document.getElementById("categories-header").addEventListener("click", () => sortTable(2));
             searchInput.addEventListener("input", filterTable);
 
-            renderTable(tableData); // Initial render
+            renderTable(tableData);
         });
     </script>
     <style>
@@ -62,6 +71,20 @@
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
         th { background-color: #f4f4f4; cursor: pointer; }
         input { width: 100%; padding: 8px; margin-top: 10px; }
+        .copy-cell { cursor: pointer; color: blue; text-decoration: underline; }
+        .copy-cell:hover { color: darkblue; }
+        .copy-message {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .copy-message.visible { opacity: 1; }
     </style>
 </head>
 <body>
@@ -79,6 +102,8 @@
         </thead>
         <tbody id="table-body"></tbody>
     </table>
+
+    <div id="copy-message" class="copy-message"></div>
 
 </body>
 </html>
