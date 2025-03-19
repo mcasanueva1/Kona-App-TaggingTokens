@@ -34,13 +34,16 @@
                 tableBody.setAttribute("data-sort", isAscending ? "desc" : "asc");
                 renderTable(tableData);
             }
-
+            
             function filterTable() {
-                const query = searchInput.value.toLowerCase();
+                const query = searchInput.value.trim().toLowerCase();
+                const terms = query.split(/\s+/); // Split query into terms by spaces
                 const filteredData = taggingTokens.filter(item =>
-                    item.name.toLowerCase().includes(query) ||
-                    item.tags.toLowerCase().includes(query) ||
-                    item.categories.some(cat => cat.toLowerCase().includes(query))
+                    terms.every(term =>
+                        item.name.toLowerCase().includes(term) ||
+                        item.tags.toLowerCase().includes(term) ||
+                        item.categories.some(cat => cat.toLowerCase().includes(term))
+                    )
                 );
                 renderTable(filteredData);
             }
