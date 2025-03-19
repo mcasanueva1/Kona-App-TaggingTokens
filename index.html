@@ -50,12 +50,36 @@
             }
 
             window.copyToClipboard = function(text) {
-                navigator.clipboard.writeText(text).then(() => {
-                    copyMessage.textContent = `Copied: ${text}`;
-                    copyMessage.classList.add("visible");
-                    setTimeout(() => copyMessage.classList.remove("visible"), 2000);
-                });
-            };
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    // Modern approach (Clipboard API)
+                    navigator.clipboard.writeText(text).then(() => {
+                        showCopyMessage(text);
+                    }).catch(err => {
+                        console.error("Clipboard API failed, falling back:", err);
+                        fallbackCopy(text);
+                    });
+                } else {
+                    // Fallback method
+                    fallbackCopy(text);
+                }
+            }
+
+            function fallbackCopy(text) {
+                const tempInput = document.createElement("textarea");
+                tempInput.value = text;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy"); // Old-school way
+                document.body.removeChild(tempInput);
+                showCopyMessage(text);
+            }
+
+            function showCopyMessage(text) {
+                copyMessage.textContent = `Copied: ${text}`;
+                copyMessage.classList.add("visible");
+                setTimeout(() => copyMessage.classList.remove("visible"), 2000);
+            }
+
 
             document.getElementById("name-header").addEventListener("click", () => sortTable(0));
             document.getElementById("tags-header").addEventListener("click", () => sortTable(1));

@@ -185,23 +185,23 @@ let taggingTokens = [
     "categories": ["tab"]
   },
   {
-    "name": "{{tabBtn1On}}",
-    "tags": "[id:tabBtn1][type:tabButton][tab:tab1][group:group1][state:on]",
+    "name": "{{tab1Btn1On}}",
+    "tags": "[id:tab1Btn1][type:tabButton][tab:tab1][group:group1][state:on]",
     "categories": ["tab"]
   },
   {
-    "name": "{{tabBtn1Off}}",
-    "tags": "[id:tabBtn1][type:tabButton][tab:tab1][group:group1][state:off]",
+    "name": "{{tab1Btn1Off}}",
+    "tags": "[id:tab1Btn1][type:tabButton][tab:tab1][group:group1][state:off]",
     "categories": ["tab"]
   },
   {
-    "name": "{{tabBtn2On}}",
-    "tags": "[id:tabBtn2][type:tabButton][tab:tab1][group:group2][state:on]",
+    "name": "{{tab1Btn2On}}",
+    "tags": "[id:tab1Btn2][type:tabButton][tab:tab1][group:group2][state:on]",
     "categories": ["tab"]
   },
   {
-    "name": "{{tabBtn2Off}}",
-    "tags": "[id:tabBtn2][type:tabButton][tab:tab1][group:group2][state:off]",
+    "name": "{{tab1Btn2Off}}",
+    "tags": "[id:tab1Btn2][type:tabButton][tab:tab1][group:group2][state:off]",
     "categories": ["tab"]
   },
   {
