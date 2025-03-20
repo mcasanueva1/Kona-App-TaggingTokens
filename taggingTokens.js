@@ -205,6 +205,66 @@ let taggingTokens = [
     "categories": ["tab"]
   },
   {
+    "name": "{{tab1Btn3On}}",
+    "tags": "[id:tab1Btn3][type:tabButton][tab:tab1][group:group3][state:on]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn3Off}}",
+    "tags": "[id:tab1Btn3][type:tabButton][tab:tab1][group:group3][state:off]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn4On}}",
+    "tags": "[id:tab1Btn4][type:tabButton][tab:tab1][group:group4][state:on]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn4Off}}",
+    "tags": "[id:tab1Btn4][type:tabButton][tab:tab1][group:group4][state:off]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn5On}}",
+    "tags": "[id:tab1Btn5][type:tabButton][tab:tab1][group:group5][state:on]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn5Off}}",
+    "tags": "[id:tab1Btn5][type:tabButton][tab:tab1][group:group5][state:off]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn6On}}",
+    "tags": "[id:tab1Btn6][type:tabButton][tab:tab1][group:group6][state:on]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn6Off}}",
+    "tags": "[id:tab1Btn6][type:tabButton][tab:tab1][group:group6][state:off]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn7On}}",
+    "tags": "[id:tab1Btn7][type:tabButton][tab:tab1][group:group7][state:on]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn7Off}}",
+    "tags": "[id:tab1Btn7][type:tabButton][tab:tab1][group:group7][state:off]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn8On}}",
+    "tags": "[id:tab1Btn8][type:tabButton][tab:tab1][group:group8][state:on]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Btn8Off}}",
+    "tags": "[id:tab1Btn8][type:tabButton][tab:tab1][group:group8][state:off]",
+    "categories": ["tab"]
+  },
+  {
     "name": "{{tab1Contents}}",
     "tags": "[id:tab1Contents][type:tabContents][tab:tab1]",
     "categories": ["tab"]
@@ -217,6 +277,36 @@ let taggingTokens = [
   {
     "name": "{{tab1Content2}}",
     "tags": "[id:tab1Content2][type:tabContent][group:group2][tab:tab1]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Content3}}",
+    "tags": "[id:tab1Content3][type:tabContent][group:group3][tab:tab1]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Content4}}",
+    "tags": "[id:tab1Content4][type:tabContent][group:group4][tab:tab1]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Content5}}",
+    "tags": "[id:tab1Content5][type:tabContent][group:group5][tab:tab1]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Content6}}",
+    "tags": "[id:tab1Content6][type:tabContent][group:group6][tab:tab1]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Content7}}",
+    "tags": "[id:tab1Content7][type:tabContent][group:group7][tab:tab1]",
+    "categories": ["tab"]
+  },
+  {
+    "name": "{{tab1Content8}}",
+    "tags": "[id:tab1Content8][type:tabContent][group:group8][tab:tab1]",
     "categories": ["tab"]
   },
   {
