@@ -131,7 +131,7 @@ let taggingTokens = [
   },
   {
     "name": "{{mainMenuGroup}}",
-    "tags": "[id:mainMenuGroup][type:menuGroup]",
+    "tags": "[id:mainMenuGroup][common]",
     "categories": ["mainMenu"]
   },
   {
