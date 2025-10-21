@@ -591,7 +591,7 @@ let taggingTokens = [
   },
   {
     "name": "{{preCallModalContent}}",
-    "tags": "[id:preCallModalContent][type:modalContent][modal:preCallModal]",
+    "tags": "[id:preCallModalContent][type:modalContent][modal:preCall]",
     "categories": ["preCall"]
   }
 ]
