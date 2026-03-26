@@ -6,7 +6,7 @@ let taggingTokens = [
   },
     {
     "name": "{{dummyTest2}}",
-    "tags": "[id:pepe][type:pepe]",
+    "tags": "[id:text01]",
     "categories": []
   },
   {
