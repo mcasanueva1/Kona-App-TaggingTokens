@@ -1,8 +1,18 @@
 let taggingTokens = [
   {
-    "name": "{{dummy}}",
+    "name": "{{dummyTest1}}",
     "tags": "[id:dummy]",
     "categories": []
+  },
+    {
+    "name": "{{dummyTest2}}",
+    "tags": "[id:pepe][type:pepe]",
+    "categories": []
+  },
+  {
+    "name": "{{standaloneModal1b}}",
+    "tags": "[id:standaloneModal1][type:modal][standalone]",
+    "categories": ["standaloneModal"]
   },
   {
     "name": "{{standaloneModal1}}",
