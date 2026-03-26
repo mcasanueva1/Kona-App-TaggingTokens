@@ -10,8 +10,13 @@ let taggingTokens = [
     "categories": []
   },
   {
-    "name": "{{standaloneModal1b}}",
-    "tags": "[id:standaloneModal1][type:modal][standalone]",
+    "name": "{{standaloneModal1bTest}}",
+    "tags": "[id:standaloneModal1bTest][type:modal][standalone]",
+    "categories": ["standaloneModal"]
+  },
+  {
+    "name": "{{standaloneModal1bTestContent}}",
+    "tags": "[id:standaloneModal1bTestContent][type:standaloneModalContent][modal:standaloneModal1bTest]",
     "categories": ["standaloneModal"]
   },
   {
